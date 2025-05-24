@@ -25,13 +25,13 @@ This is a terminal-based password evaluation tool written in Python. It checks p
 ### 🔐 **Offline Crack Time**
 - **Definition:** How long it would take an attacker to guess your password if they already have access to its encrypted hash (e.g., after a data breach).
 - **Speed:** Billions of guesses per second using modern GPUs.
-- **Tools:** Hashcat, John the Ripper.
+- **Common Tools:** Hashcat, John the Ripper.
 - **Risk:** Extremely high for weak passwords.
 
 ### 🌐 **Online Crack Time**
 - **Definition:** Time to guess your password through a live interface (e.g., login form).
 - **Speed:** Slow due to network delays, rate limits, and CAPTCHA.
-- **Tools:** Hydra, browser automation.
+- **Common Tools:** Hydra, browser automation.
 - **Risk:** Lower, but still dangerous if MFA/2FA isn't enabled.
 
 ---
