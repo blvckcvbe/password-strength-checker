@@ -163,13 +163,6 @@ Suggestions to improve your password:
 
 ---
 
-## 🧪 Run Tests
-```bash
-pytest tests/
-```
-
----
-
 ## Exit
 Once your done, simply type exit, then deactivate to leave the virtual environment
 
