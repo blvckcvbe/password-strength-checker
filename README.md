@@ -11,18 +11,27 @@ This is a terminal-based password evaluation tool written in Python. It checks p
 
 ---
 
+## 📋 Changelog
+
+### 2025-05-24
+- Added `.gitignore` entry for large wordlists (e.g., `rockyou.txt`, `rockyou.txt.gz`).
+  - Added an install script in its place
+- Updated setup instructions for clarity across different operating systems.
+- Improved accuracy of crack time using multiple hash rates
+---
+
 ## ✨ Password Strength Metrics Explained
 
 ### 🔐 **Offline Crack Time**
 - **Definition:** How long it would take an attacker to guess your password if they already have access to its encrypted hash (e.g., after a data breach).
 - **Speed:** Billions of guesses per second using modern GPUs.
-- **Tools:** Hashcat, John the Ripper.
+- **Common Tools:** Hashcat, John the Ripper.
 - **Risk:** Extremely high for weak passwords.
 
 ### 🌐 **Online Crack Time**
 - **Definition:** Time to guess your password through a live interface (e.g., login form).
 - **Speed:** Slow due to network delays, rate limits, and CAPTCHA.
-- **Tools:** Hydra, browser automation.
+- **Common Tools:** Hydra, browser automation.
 - **Risk:** Lower, but still dangerous if MFA/2FA isn't enabled.
 
 ---
@@ -59,6 +68,8 @@ This is a terminal-based password evaluation tool written in Python. It checks p
 git clone https://github.com/blvckcvbe/password-strength-checker
 sudo pacman -S python
 cd ~/password-strength-checker
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+gzip rockyou.txt
 python -m venv venv
 source venv/bin/activate.fish
 pip install -r requirements.txt
@@ -69,6 +80,8 @@ pip install -r requirements.txt
 git clone https://github.com/blvckcvbe/password-strength-checker
 sudo apt update && sudo apt install python3 python3-venv python3-pip -y
 cd ~/password-strength-checker
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+gzip rockyou.txt
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -79,6 +92,9 @@ pip install -r requirements.txt
 git clone https://github.com/blvckcvbe/password-strength-checker
 winget install -e --id Python.Python.3.11 --scope machine
 cd C:\path\to\password-strength-checker
+Invoke-WebRequest -Uri "https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt" -OutFile "rockyou.txt"
+Compress-Archive -Path "rockyou.txt" -DestinationPath "rockyou.zip"
+Remove-Item "rockyou.txt"
 python -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
@@ -90,6 +106,8 @@ Install Python using Homebrew (if you don't have Homebrew installed, follow inst
 git clone https://github.com/blvckcvbe/password-strength-checker
 brew install python
 cd ~/password-strength-checker
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+gzip rockyou.txt
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -110,18 +128,37 @@ python checker/main.py
 🔐 Advanced Password Strength Checker
 Type 'exit' to quit.
 
-Enter password: P@ssw0rd123
+Enter password: Helloworld!
 
 Password Checks:
-Length >= 12: ✔
+Length >= 12: ✘
 Has uppercase: ✔
 Has lowercase: ✔
-Has number: ✔
+Has number: ✘
 Has symbol: ✔
+Not a common password: ✔
+Not leetspeak: ✔
 
-Entropy: 75.35 bits
-Estimated offline crack time: ~22 years
-Estimated online crack time: ~120,000 years
+Entropy: 19.80 bits
+Estimated offline crack time (default): 0.000 seconds
+Estimated online crack time: 2.11 days
+
+Crack times for different hash types:
+MD5       : 0.000 seconds
+SHA1      : 0.000 seconds
+SHA256    : 0.000 seconds
+NTLM      : 0.000 seconds
+BCRYPT    : 30.43 minutes
+ARGON2ID  : 12.68 minutes
+SCRYPT    : 19.02 minutes
+
+Suggestions to improve your password:
+- Failed check: Length >= 12
+- Failed check: Has number
+- Password is too short. Consider making it at least 12 characters.
+- Very weak password.
+
+==================================================
 ```
 
 ---
