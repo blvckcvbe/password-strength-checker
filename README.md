@@ -11,6 +11,20 @@ This is a terminal-based password evaluation tool written in Python. It checks p
 
 ---
 
+## 📋 Changelog
+
+### [Unreleased]
+- Added this changelog section to README.
+
+### 2025-05-24
+- Improved large file handling: Added `.gitignore` entry for large wordlists (e.g., `rockyou.txt`, `rockyou.txt.gz`).
+- Provided guidance for handling large files (compression, Git LFS, or download scripts).
+- Updated setup instructions for clarity across different operating systems.
+- Enhanced usage documentation and troubleshooting tips for common Git/GitHub issues.
+- Improved guidance for using compressed dictionary files with the password checker.
+
+---
+
 ## ✨ Password Strength Metrics Explained
 
 ### 🔐 **Offline Crack Time**
