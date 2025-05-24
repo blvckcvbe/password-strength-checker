@@ -4,8 +4,9 @@ This is a terminal-based password evaluation tool written in Python. It checks p
 
 - ✅ Minimum length
 - ✅ Use of upper/lowercase letters, numbers, and symbols
+- ✅ Use of Leetspeak
 - ✅ Entropy calculation (bits of security)
-- ✅ Estimated brute-force crack time
+- ✅ Estimated brute-force crack time (offline & online)
   
 🎨 Using `colorama` for color-coded outputs to make it more readable and user-friendly.
 
