@@ -8,7 +8,7 @@ This is a terminal-based password evaluation tool written in Python. It checks p
 - ✅ Entropy calculation (bits of security)
 - ✅ Estimated brute-force crack time (offline & online)
   
-🎨 Using `colorama` for color-coded outputs to make it more readable and user-friendly.
+🎨 *Using `colorama` for color-coded outputs to make it more readable and user-friendly.*
 
 ---
 
@@ -41,12 +41,8 @@ This is a terminal-based password evaluation tool written in Python. It checks p
 
 ### Assumptions
 1. **Offline Crack Time**:
-   - Assumes no salting and fast hashing algorithms like MD5 or SHA-1.
-   - Offline cracking speed: ~1 trillion guesses per second (modern GPUs).
-       - (seems a bit unrealistic but I did it like this because compared to other password strength checkers, this was waayy off (by a billion years!)
-        so i just increased the guesses per second and it seemed to make it more accurate. If it didn't fix it please do let me know.)
-       - *Edit*: perhaps I could adjust the dictionary used and that could fix the accuracy? Rather than just changing the guesses per second? 
-   - For bcrypt or Argon2, the effective cracking speed drops to ~100 guesses per second.
+   - Offline cracking speed: ~10 billion guesses per second (modern GPUs).
+   - For bcrypt or Argon2, the effective cracking speed drops to ~500-1000 guesses per second.
 
 2. **Online Crack Time**:
    - Assumes no rate-limiting or MFA/2FA.
