@@ -168,6 +168,8 @@ Once your done, simply type exit, then deactivate to leave the virtual environme
 ## Feedback
 If you have any feedback on my password-checker please do let me know! I want to improve it and make it as accurate as possible. Thank you!
 
+---
+
 ## 📂 License
 MIT
 
