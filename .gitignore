@@ -8,3 +8,8 @@ venv/
 # Ignore IDE-specific files
 .vscode/
 .idea/
+
+#Ignore Large Files
+rockyou.txt
+rockyou.txt.gz
+
