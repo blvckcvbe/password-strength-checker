@@ -56,6 +56,7 @@ This is a terminal-based password evaluation tool written in Python. It checks p
 
 ### 🐧 Arch Linux / Fish Shell:
 ```fish
+git clone https://github.com/blvckcvbe/password-strength-checker
 sudo pacman -S python
 cd ~/password-strength-checker
 python -m venv venv
@@ -65,6 +66,7 @@ pip install -r requirements.txt
 
 ### 🐧 Debian / Ubuntu:
 ```bash
+git clone https://github.com/blvckcvbe/password-strength-checker
 sudo apt update && sudo apt install python3 python3-venv python3-pip -y
 cd ~/password-strength-checker
 python3 -m venv venv
@@ -74,6 +76,7 @@ pip install -r requirements.txt
 
 ### 🪟 Windows 11 (PowerShell):
 ```powershell
+git clone https://github.com/blvckcvbe/password-strength-checker
 winget install -e --id Python.Python.3.11 --scope machine
 cd C:\path\to\password-strength-checker
 python -m venv venv
@@ -84,6 +87,7 @@ pip install -r requirements.txt
 ### 🍎 macOS:
 Install Python using Homebrew (if you don't have Homebrew installed, follow instructions [here](https://brew.sh/)):
 ```bash
+git clone https://github.com/blvckcvbe/password-strength-checker
 brew install python
 cd ~/password-strength-checker
 python3 -m venv venv
